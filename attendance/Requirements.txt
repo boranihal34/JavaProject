@@ -1,0 +1,29 @@
+mysql -u root -p -h localhost -P 3306  
+
+1.Add Employee in table
+2.Get data of all employees.
+3.Create a Attendance table
+
+    CREATE TABLE Attendance (
+        attendanceid INT AUTO_INCREMENT, -- Optional unique identifier for attendance records
+        employeeid INT NOT NULL,
+        attendance_date DATE NOT NULL,
+        status boolean,
+        PRIMARY KEY (attendanceid),
+        FOREIGN KEY (employeeid) REFERENCES Employee(employeeid)
+    );
+
+
+4.Create a payment table
+    CREATE TABLE Payment (
+        paymentid INT AUTO_INCREMENT, -- Optional unique identifier for attendance records
+        employeeid INT NOT NULL,
+        amount DOUBLE NOT NULL,
+        paymentDate DATE NOT NULL,
+        status nvarchar(100) NOT NULL,
+        note nvarchar(200),
+        PRIMARY KEY (paymentid),
+        FOREIGN KEY (employeeid) REFERENCES Employee(employeeid)
+    );
+
+5.          
