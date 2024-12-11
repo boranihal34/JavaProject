@@ -1,5 +1,6 @@
 package com.example.model;
 
+
 public class Attendance {
     private int employeeId;
     private int attendanceId;

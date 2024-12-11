@@ -49,12 +49,15 @@ public class EmployeeDao {
         Connection connection = null;
         Statement statement = null;
         ResultSet resultSet = null;
+        PreparedStatement preparedStatement=null;
 
         connection=DbConnection.getConnection();
         
 
         try{
-            
+
+            preparedStatement = connection.prepareStatement(sqlQuery);
+
             statement=connection.createStatement();
             resultSet=statement.executeQuery(sqlQuery);
             while (resultSet.next()) {

@@ -3,5 +3,14 @@
     "name": "Launch JavaFX Application",
     "request": "launch",
     "mainClass": "com.example.Main",
-    "vmArgs": "--module-path C:/javafx-sdk/lib --add-modules javafx.controls,javafx.fxml"
+    "vmArgs": "--module-path C:/javafx-sdk/lib --add-modules javafx.controls,javafx.fxml",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.example.Main",
+            "projectName": "attendance"
+        }
+    ]
 }

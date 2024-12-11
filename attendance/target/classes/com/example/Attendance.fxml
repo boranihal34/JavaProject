@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.employeeattendance.controller.AttendanceController" spacing="10" alignment="CENTER">
+    <Label text="Mark Attendance" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    <TableView fx:id="employeeTable" prefHeight="200" prefWidth="400">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="100" />
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="200" />
+            <TableColumn fx:id="attendanceColumn" text="Present" prefWidth="100" />
+        </columns>
+    </TableView>
+    <Button text="Save Attendance" onAction="#saveAttendance"/>
+</VBox>
